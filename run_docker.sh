@@ -4,10 +4,10 @@
 
 # Step 1:
 # Build image and add a descriptive tag
-docker build --tag project4_attempt_1
+docker build . --tag project4_attempt_1
 # Step 2: 
 # List docker images
 docker image ls
 # Step 3: 
 # Run flask app
-sudo docker run --name project4_attempt_1 -p 5001:5001 project4_attempt_1
+sudo docker run --name project4_attempt_1 -p 80:80 project4_attempt_1mini
