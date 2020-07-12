@@ -10,4 +10,4 @@ docker build . --tag project4_attempt_1
 docker image ls
 # Step 3: 
 # Run flask app
-sudo docker run --name project4_attempt_1 -p 80:80 project4_attempt_1mini
+sudo docker run --name project4_attempt_1 -p 8080:80 project4_attempt_1
