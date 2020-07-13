@@ -6,7 +6,7 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
-dockerpath=qasibeat/project4_attempt_1
+dockerpath=qasibeat/project4attempt2
 
 # Step 2:  
 # Authenticate & tag
