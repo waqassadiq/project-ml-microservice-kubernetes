@@ -1,1 +1,53 @@
-<paste log output from Kubernetes-mediated prediction, here>
+(.devops) waqassadiq (master *) project-ml-microservice-kubernetes
+$ ./run_kubernetes.sh 
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+deployment.apps/project4attempt2 created
+NAME                                READY   STATUS              RESTARTS   AGE
+project4attempt2-56f6f56648-xxt7b   0/1     ContainerCreating   0          0s
+service/project4attempt2 exposed
+(.devops) waqassadiq (master *) project-ml-microservice-kubernetes
+$ kubectl get pods
+NAME                                READY   STATUS    RESTARTS   AGE
+project4attempt2-56f6f56648-xxt7b   1/1     Running   0          10s
+(.devops) waqassadiq (master *) project-ml-microservice-kubernetes
+$ kubectl get deployments --all-namespaces
+NAMESPACE     NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+default       project4attempt2   1/1     1            1           26s
+kube-system   coredns            1/1     1            1           21h
+(.devops) waqassadiq (master *) project-ml-microservice-kubernetes
+$ kubectl get pods
+NAME                                READY   STATUS    RESTARTS   AGE
+project4attempt2-56f6f56648-xxt7b   1/1     Running   0          37s
+(.devops) waqassadiq (master *) project-ml-microservice-kubernetes
+$ kubectl cluster-info 
+Kubernetes master is running at https://127.0.0.1:32768
+KubeDNS is running at https://127.0.0.1:32768/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+(.devops) waqassadiq (master *) project-ml-microservice-kubernetes
+$ kubectl get services
+NAME               TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+kubernetes         ClusterIP      10.96.0.1        <none>        443/TCP          21h
+project4attempt2   LoadBalancer   10.101.126.105   <pending>     8000:30412/TCP   63s
+(.devops) waqassadiq (master *) project-ml-microservice-kubernetes
+$ kubectl get services
+NAME               TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+kubernetes         ClusterIP      10.96.0.1        <none>        443/TCP          21h
+project4attempt2   LoadBalancer   10.101.126.105   <pending>     8000:30412/TCP   5m7s
+(.devops) waqassadiq (master *) project-ml-microservice-kubernetes
+$ kubectl get pods
+NAME                                READY   STATUS    RESTARTS   AGE
+project4attempt2-56f6f56648-xxt7b   1/1     Running   0          73m
+(.devops) waqassadiq (master *) project-ml-microservice-kubernetes
+$ kubectl port-forward redis-master-765d459796-258hz 7000:6379
+Error from server (NotFound): pods "redis-master-765d459796-258hz" not found
+(.devops) waqassadiq (master *) project-ml-microservice-kubernetes
+$ kubectl port-forward redis-master-765d459796-258hz 7000:6379
+Error from server (NotFound): pods "redis-master-765d459796-258hz" not found
+(.devops) waqassadiq (master *) project-ml-microservice-kubernetes
+$ kubectl port-forward project4attempt2-56f6f56648-xxt7b  8000:80
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
