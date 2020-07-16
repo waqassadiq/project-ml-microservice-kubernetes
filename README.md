@@ -1,8 +1,5 @@
 [![CircleCI](https://app.circleci.com/pipelines/github/waqassadiq/project-ml-microservice-kubernetes.svg?style=svg&circle-token=74c55183b09ff5f84dc6723d607283ccc06f25b0)](https://app.circleci.com/pipelines/github/waqassadiq/project-ml-microservice-kubernetes)
 
-[![CircleCI](https://circleci.com/<VCS>/<ORG_NAME>/<PROJECT_NAME>.svg?style=svg&circle-token=<YOUR_STATUS_API_TOKEN>)](<LINK>)
-
-
 ## Project Overview
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
