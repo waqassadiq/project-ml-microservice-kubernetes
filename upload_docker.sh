@@ -10,7 +10,8 @@ dockerpath=qasibeat/project4attempt2
 
 # Step 2:  
 # Authenticate & tag
-docker tag qasibeat/project4attempt2 qasibeat/project4attempt2:version1.0
+docker login --username=qasibeat
+docker tag $dockerpath $dockerpath:version1.0
 echo "Docker ID and Image: $dockerpath"
 
 # Step 3:
