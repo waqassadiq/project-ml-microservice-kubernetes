@@ -1,3 +1,6 @@
+Terminal 1
+==========
+
 waqassadiq (master *) project-ml-microservice-kubernetes
 $ minikube start
 😄  minikube v1.12.0 on Darwin 10.15.5
@@ -25,6 +28,9 @@ Forwarding from [::1]:8000 -> 80
 Handling connection for 8000
 Handling connection for 8000
 Handling connection for 8000
+
+Terminal 2
+==========
 
 The default interactive shell is now zsh.
 To update your account to use zsh, please run `chsh -s /bin/zsh`.
@@ -100,7 +106,7 @@ $ kubectl logs project4attempt2-56f6f56648-xxt7b
    CHAS     RM    TAX  PTRATIO      B  LSTAT
 0     0  6.575  296.0     15.3  396.9   4.98
 [2020-07-17 04:56:51,174] INFO in app: Scaling Payload: 
-   CHAS     RM    TAX  PTRATIO      B  LSTAT
+   CHAS     RM    TAX  PTRATIO      B  LSTA
 0     0  6.575  296.0     15.3  396.9   4.98
 [2020-07-17 04:56:51,179] INFO in app: prediction: 
 [20.35373177134412]
