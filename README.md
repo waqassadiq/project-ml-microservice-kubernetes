@@ -65,3 +65,6 @@ Forwarding from [::1]:8000 -> 80
 Handling connection for 8000
 Handling connection for 8000
 Handling connection for 8000
+
+### Printing the kuberneties logs
+kubectl logs project4attempt2-56f6f56648-xxt7b
